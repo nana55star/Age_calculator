@@ -1,5 +1,10 @@
 import datetime
 
+# print headers:
+print("----------------------------------------------")
+print("Age Calculator version 1.0")
+print("----------------------------------------------")
+
 # Get the user's birthday
 myDay = input("Please enter the Day your born: ")
 myMonth = input("Please enter the Month you were born: ")

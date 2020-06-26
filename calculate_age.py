@@ -2,19 +2,26 @@ import datetime
 
 # print headers:
 print("----------------------------------------------")
-print("Age Calculator version 1.0")
+print("Age Calculator version 2.0")
 print("----------------------------------------------")
 
-# Get the user's birthday
-myDay = input("Please enter the Day your born: ")
-myMonth = input("Please enter the Month you were born: ")
-myYear = input("Please enter the Year you were born: ")
+# try and except block
+while True:
+    try:
+        # Get the user's birthday
+        myDay = input("Please enter the Day you were born: ")
+        myMonth = input("Please enter the Month you were born: ")
+        myYear = input("Please enter the Year you were born: ")
 
-print("Your birthday is on " + str(myDay) + "-" + str(myMonth) + "-" + str(myYear) )
-# Calculating the user's age
-myBirthday = datetime.date(int(myYear), int(myMonth) , int(myDay) )
-today = datetime.date.today()
-dayDiff = (today-myBirthday)
+        print("Your birthday is on " + str(myDay) + "-" + str(myMonth) + "-" + str(myYear))
 
-# Print the user's age
-print("Your age is " + str(int(dayDiff.days/365.25))+" Years")
+        # Calculating the user's age
+        myBirthday = datetime.date(int(myYear), int(myMonth), int(myDay))
+        today = datetime.date.today()
+        dayDiff = (today - myBirthday)
+
+        # Print the user's age
+        print("Your age is " + str(int(dayDiff.days / 365.25)) + " Years")
+        break;
+    except:
+        print("\nSorry, there is an error in your input!!")
